@@ -1,18 +1,51 @@
 # About this repo
 
-Project with 3 searching algorithms, linear, binary and ternary
+Project to generate random data about cars in colombia.
 
-## Linear sort
+# Attributes 
 
-Time complexity: `O(n)`
+1. VehicleID (Primary Key): Unique identifier for each vehicle.
+2. LicensePlate: The license plate number of the vehicle.
+3. Brand: The brand or manufacturer of the vehicle. 
+4. Model: The model of the vehicle. 
+5. Year: The manufacturing year of the vehicle. 
+6. Color: The color of the vehicle. 
+7. FuelType: The type of fuel the vehicle uses (e.g., gasoline, diesel, electric). 
+8. TransmissionType: The type of transmission (e.g., automatic, manual). 
+9. OdometerReading: The current odometer reading of the vehicle. 
+10. RegistrationDate: The date when the vehicle was registered. 
+11. InsuranceProvider: The insurance provider for the vehicle. 
+12. InsuranceExpirationDate: The expiration date of the vehicle insurance. 
+13. OwnerName: The name of the vehicle owner. 
+14. OwnerID: Identification number of the vehicle owner. 
+15. OwnerAddress: The address of the vehicle owner. 
+16. City: The city where the vehicle is registered. 
+17. Department: The department (administrative region) where the vehicle is registered. 
+18. VehicleType: The type of vehicle (e.g., sedan, SUV, truck). 
+19. EngineSize: The size of the vehicle engine. 
+20. VehicleClass: The class of the vehicle (e.g., compact, mid-size, luxury). 
+21. WheelDrive: The type of wheel drive (e.g., 2WD, 4WD). 
+22. RegistrationStatus: The status of vehicle registration (e.g., active, expired). 
+23. TaxPaymentStatus: The status of vehicle tax payment. 
+24. LastMaintenanceDate: The date of the vehicle's last maintenance. 
+25. NumberOfSeats: The number of seats in the vehicle. 
+26. NumberOfDoors: The number of doors in the vehicle. 
+27. GPSInstalled: Indicates whether the vehicle has a GPS system installed. 
+28. EmissionStandard: The emission standard the vehicle complies with. 
+29. SafetyRating: Safety rating of the vehicle. 
+30. InsuranceCoverageType: Type of coverage in the vehicle insurance.
 
-## Binary sort
+Taken from ChatGPT
 
-Time complexity: `O(log(n))`
+# Sources
 
-## Ternary sort
-
-Time complexity: `O(2 * log3(n))`
+1. Car Color https://www.elcarrocolombiano.com/industria/colores-de-autos-mas-populares-2021/
+2. Brand https://www.eltiempo.com/economia/finanzas-personales/estas-son-las-marcas-de-carros-mas-vendidas-en-colombia-en-2023-801990
+3. fuel_type https://www.semana.com/economia/actualidad/vida-ejecutiva/automoviles/articulo/en-colombia-de-los-vehiculos-a-gas-natural-el-77-por-ciento-son-buses-y-el-16-camiones/202218/
+4. transmission_type https://noticias.autocosmos.com.co/2020/04/21/los-autos-con-caja-mecanica-tienden-a-desaparecer
+5. insurance_provider https://aliarseguros.com/blog-mejores-aseguradoras-autos-colombia
+6. city https://noticias.autocosmos.com.co/2019/10/03/en-que-lugares-de-colombia-se-matriculan-mas-vehiculos
+7. vehicle_type https://www.motor.com.co/industria/En-2023-se-vendieron-186.222-vehiculos-nuevos-en-Colombia.-Cayo--29-el-mercado.-20240102-0006.html
 
 ---
 
@@ -33,32 +66,9 @@ Make sure you have "coverage" in your requirements.txt file and run pip install.
 Then run `coverage run -m unittest discover` and after that run `coverage report` to get the following table:
 
 ```shell
-Name                             Stmts   Miss  Cover
-----------------------------------------------------
-base/__init__.py                     0      0   100%
-base/test/__init__.py                0      0   100%
-binary/__init__.py                   0      0   100%
-binary/algorithm.py                 11      0   100%
-binary/test/__init__.py              0      0   100%
-binary/test/test_algorithm.py       11      1    91%
-linear/__init__.py                   0      0   100%
-linear/algorithm.py                  5      0   100%
-linear/test/__init__.py              0      0   100%
-linear/test/test_algorithm.py       11      1    91%
-ternary/__init__.py                  0      0   100%
-ternary/algorithm.py                14      0   100%
-ternary/test/__init__.py             0      0   100%
-ternary/test/test_algorithm.py      11      1    91%
-utils/__init__.py                    0      0   100%
-utils/constants_test.py              2      0   100%
-----------------------------------------------------
-TOTAL                               65      3    95%
+
 ```
 
 # Code beautifier
 This code has been beautify using black: https://github.com/psf/black. 
 The command to use is `black . -l 120`.
-
-# Searching performance
-
-

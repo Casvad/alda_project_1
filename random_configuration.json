@@ -1,0 +1,1356 @@
+{
+  "owner_name": {
+    "enabled": true,
+    "resolver": "random_name",
+    "configuration": {
+      "primary_name": "config/names.csv",
+      "second_name": "config/names.csv",
+      "first_last_name": "config/last_names.csv",
+      "second_last_name": "config/last_names.csv"
+    }
+  },
+  "color": {
+    "enabled": true,
+    "resolver": "weighted_random",
+    "configuration": {
+      "weighted_attributes": [
+        {
+          "value": "Blanco",
+          "weight": 40
+        },
+        {
+          "value": "Plateado",
+          "weight": 17
+        },
+        {
+          "value": "Gris",
+          "weight": 18
+        },
+        {
+          "value": "Negro",
+          "weight": 14
+        },
+        {
+          "value": "Rojo",
+          "weight": 6
+        }
+      ],
+      "other_attributes": [
+        "Azul",
+        "Verde",
+        "Amarillo"
+      ]
+    }
+  },
+  "owner_id": {
+    "enabled": true,
+    "resolver": "distinct_random_integer",
+    "configuration": {
+      "min_value": 20677476,
+      "max_value": 1099999999,
+      "distinct_id": "owner_id"
+    }
+  },
+  "brand": {
+    "enabled": true,
+    "resolver": "weighted_random",
+    "configuration": {
+      "weighted_attributes": [
+        {
+          "weight": 19.5,
+          "value": "Renault"
+        },
+        {
+          "weight": 15.0,
+          "value": "Toyota"
+        },
+        {
+          "weight": 13.1,
+          "value": "Mazda"
+        },
+        {
+          "weight": 12.9,
+          "value": "Chevrolet"
+        },
+        {
+          "weight": 11.3,
+          "value": "Kia"
+        },
+        {
+          "weight": 7.9,
+          "value": "Suzuki"
+        },
+        {
+          "weight": 5.3,
+          "value": "Nissan"
+        },
+        {
+          "weight": 4.3,
+          "value": "Volkwagen"
+        },
+        {
+          "weight": 3.8,
+          "value": "Hyundai"
+        },
+        {
+          "weight": 2.4,
+          "value": "Ford"
+        },
+        {
+          "weight": 1.9,
+          "value": "BMW"
+        },
+        {
+          "weight": 1.4,
+          "value": "Mercedes benz"
+        },
+        {
+          "weight": 0.8,
+          "value": "Audi"
+        },
+        {
+          "weight": 0.6,
+          "value": "Volvo"
+        },
+        {
+          "weight": 0.1,
+          "value": "Land Rover"
+        }
+      ],
+      "other_attributes": []
+    }
+  },
+  "model": {
+    "enabled": true,
+    "resolver": "conditional_weighted_random",
+    "configuration": {
+      "conditional_column": "brand",
+      "weighted_attributes": [
+        {
+          "value": "Renault",
+          "options": [
+            {
+              "value": "Clio",
+              "weight": 15
+            },
+            {
+              "value": "Duster",
+              "weight": 20
+            },
+            {
+              "value": "Sandero",
+              "weight": 18
+            },
+            {
+              "value": "Megane",
+              "weight": 12
+            },
+            {
+              "value": "Kwid",
+              "weight": 10
+            },
+            {
+              "value": "Captur",
+              "weight": 8
+            },
+            {
+              "value": "Koleos",
+              "weight": 7
+            },
+            {
+              "value": "Fluence",
+              "weight": 5
+            },
+            {
+              "value": "Twingo",
+              "weight": 3
+            },
+            {
+              "value": "Symbol",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "value": "Toyota",
+          "options": [
+            {
+              "value": "Corolla",
+              "weight": 25
+            },
+            {
+              "value": "RAV4",
+              "weight": 22
+            },
+            {
+              "value": "Camry",
+              "weight": 18
+            },
+            {
+              "value": "Yaris",
+              "weight": 15
+            },
+            {
+              "value": "Highlander",
+              "weight": 10
+            },
+            {
+              "value": "Prius",
+              "weight": 7
+            },
+            {
+              "value": "Sienna",
+              "weight": 5
+            },
+            {
+              "value": "Tacoma",
+              "weight": 4
+            },
+            {
+              "value": "Avalon",
+              "weight": 3
+            },
+            {
+              "value": "Land Cruiser",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Mazda",
+          "options": [
+            {
+              "value": "Mazda3",
+              "weight": 20
+            },
+            {
+              "value": "CX-5",
+              "weight": 15
+            },
+            {
+              "value": "Mazda6",
+              "weight": 12
+            },
+            {
+              "value": "MX-5",
+              "weight": 10
+            },
+            {
+              "value": "CX-9",
+              "weight": 8
+            },
+            {
+              "value": "Mazda2",
+              "weight": 6
+            },
+            {
+              "value": "CX-3",
+              "weight": 5
+            },
+            {
+              "value": "Mazda5",
+              "weight": 4
+            },
+            {
+              "value": "RX-8",
+              "weight": 3
+            },
+            {
+              "value": "MPV",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "value": "Chevrolet",
+          "options": [
+            {
+              "value": "Silverado",
+              "weight": 20
+            },
+            {
+              "value": "Equinox",
+              "weight": 18
+            },
+            {
+              "value": "Malibu",
+              "weight": 15
+            },
+            {
+              "value": "Traverse",
+              "weight": 12
+            },
+            {
+              "value": "Camaro",
+              "weight": 10
+            },
+            {
+              "value": "Impala",
+              "weight": 8
+            },
+            {
+              "value": "Colorado",
+              "weight": 7
+            },
+            {
+              "value": "Spark",
+              "weight": 5
+            },
+            {
+              "value": "Blazer",
+              "weight": 3
+            },
+            {
+              "value": "Suburban",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "value": "Kia",
+          "options": [
+            {
+              "value": "Sorento",
+              "weight": 20
+            },
+            {
+              "value": "Sportage",
+              "weight": 18
+            },
+            {
+              "value": "Optima",
+              "weight": 15
+            },
+            {
+              "value": "Forte",
+              "weight": 12
+            },
+            {
+              "value": "Telluride",
+              "weight": 10
+            },
+            {
+              "value": "Rio",
+              "weight": 8
+            },
+            {
+              "value": "Soul",
+              "weight": 7
+            },
+            {
+              "value": "Cadenza",
+              "weight": 5
+            },
+            {
+              "value": "Stinger",
+              "weight": 3
+            },
+            {
+              "value": "Niro",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "value": "Suzuki",
+          "options": [
+            {
+              "value": "Swift",
+              "weight": 25
+            },
+            {
+              "value": "Vitara",
+              "weight": 20
+            },
+            {
+              "value": "Jimny",
+              "weight": 15
+            },
+            {
+              "value": "Baleno",
+              "weight": 10
+            },
+            {
+              "value": "S-Cross",
+              "weight": 8
+            },
+            {
+              "value": "Celerio",
+              "weight": 7
+            },
+            {
+              "value": "Ignis",
+              "weight": 5
+            },
+            {
+              "value": "Alto",
+              "weight": 4
+            },
+            {
+              "value": "Grand Vitara",
+              "weight": 3
+            },
+            {
+              "value": "SX4",
+              "weight": 3
+            }
+          ]
+        },
+        {
+          "value": "Nissan",
+          "options": [
+            {
+              "value": "Altima",
+              "weight": 20
+            },
+            {
+              "value": "Rogue",
+              "weight": 18
+            },
+            {
+              "value": "Sentra",
+              "weight": 15
+            },
+            {
+              "value": "Pathfinder",
+              "weight": 12
+            },
+            {
+              "value": "Maxima",
+              "weight": 10
+            },
+            {
+              "value": "Murano",
+              "weight": 8
+            },
+            {
+              "value": "Titan",
+              "weight": 7
+            },
+            {
+              "value": "Armada",
+              "weight": 5
+            },
+            {
+              "value": "Versa",
+              "weight": 3
+            },
+            {
+              "value": "370Z",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "value": "Volkwagen",
+          "options": [
+            {
+              "value": "Golf",
+              "weight": 20
+            },
+            {
+              "value": "Jetta",
+              "weight": 18
+            },
+            {
+              "value": "Passat",
+              "weight": 15
+            },
+            {
+              "value": "Tiguan",
+              "weight": 12
+            },
+            {
+              "value": "Atlas",
+              "weight": 10
+            },
+            {
+              "value": "Arteon",
+              "weight": 8
+            },
+            {
+              "value": "ID.4",
+              "weight": 7
+            },
+            {
+              "value": "Beetle",
+              "weight": 5
+            },
+            {
+              "value": "Touareg",
+              "weight": 3
+            },
+            {
+              "value": "Atlas Cross Sport",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "value": "Hyundai",
+          "options": [
+            {
+              "value": "Sonata",
+              "weight": 20
+            },
+            {
+              "value": "Tucson",
+              "weight": 18
+            },
+            {
+              "value": "Santa Fe",
+              "weight": 15
+            },
+            {
+              "value": "Elantra",
+              "weight": 12
+            },
+            {
+              "value": "Kona",
+              "weight": 10
+            },
+            {
+              "value": "Palisade",
+              "weight": 8
+            },
+            {
+              "value": "Veloster",
+              "weight": 7
+            },
+            {
+              "value": "Venue",
+              "weight": 5
+            },
+            {
+              "value": "Ioniq",
+              "weight": 3
+            },
+            {
+              "value": "Nexo",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "value": "Ford",
+          "options": [
+            {
+              "value": "F-150",
+              "weight": 20
+            },
+            {
+              "value": "Escape",
+              "weight": 18
+            },
+            {
+              "value": "Explorer",
+              "weight": 15
+            },
+            {
+              "value": "Mustang",
+              "weight": 12
+            },
+            {
+              "value": "Edge",
+              "weight": 10
+            },
+            {
+              "value": "Ranger",
+              "weight": 8
+            },
+            {
+              "value": "Focus",
+              "weight": 7
+            },
+            {
+              "value": "Fusion",
+              "weight": 5
+            },
+            {
+              "value": "Expedition",
+              "weight": 3
+            },
+            {
+              "value": "Maverick",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "value": "BMW",
+          "options": [
+            {
+              "value": "3 Series",
+              "weight": 20
+            },
+            {
+              "value": "X5",
+              "weight": 18
+            },
+            {
+              "value": "5 Series",
+              "weight": 15
+            },
+            {
+              "value": "X3",
+              "weight": 12
+            },
+            {
+              "value": "X1",
+              "weight": 10
+            },
+            {
+              "value": "7 Series",
+              "weight": 8
+            },
+            {
+              "value": "4 Series",
+              "weight": 7
+            },
+            {
+              "value": "X7",
+              "weight": 5
+            },
+            {
+              "value": "2 Series",
+              "weight": 3
+            },
+            {
+              "value": "i3",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "value": "Mercedes benz",
+          "options": [
+            {
+              "value": "C-Class",
+              "weight": 20
+            },
+            {
+              "value": "E-Class",
+              "weight": 18
+            },
+            {
+              "value": "GLE",
+              "weight": 15
+            },
+            {
+              "value": "GLC",
+              "weight": 12
+            },
+            {
+              "value": "A-Class",
+              "weight": 10
+            },
+            {
+              "value": "S-Class",
+              "weight": 8
+            },
+            {
+              "value": "CLA",
+              "weight": 7
+            },
+            {
+              "value": "GLA",
+              "weight": 5
+            },
+            {
+              "value": "GLS",
+              "weight": 3
+            },
+            {
+              "value": "G-Class",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "value": "Audi",
+          "options": [
+            {
+              "value": "A4",
+              "weight": 20
+            },
+            {
+              "value": "Q5",
+              "weight": 18
+            },
+            {
+              "value": "A3",
+              "weight": 15
+            },
+            {
+              "value": "Q7",
+              "weight": 12
+            },
+            {
+              "value": "Q3",
+              "weight": 10
+            },
+            {
+              "value": "A6",
+              "weight": 8
+            },
+            {
+              "value": "Q8",
+              "weight": 7
+            },
+            {
+              "value": "e-tron",
+              "weight": 5
+            },
+            {
+              "value": "RS6",
+              "weight": 3
+            },
+            {
+              "value": "TT",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "value": "Volvo",
+          "options": [
+            {
+              "value": "XC90",
+              "weight": 20
+            },
+            {
+              "value": "XC60",
+              "weight": 18
+            },
+            {
+              "value": "S60",
+              "weight": 15
+            },
+            {
+              "value": "V60",
+              "weight": 12
+            },
+            {
+              "value": "XC40",
+              "weight": 10
+            },
+            {
+              "value": "S90",
+              "weight": 8
+            },
+            {
+              "value": "V90",
+              "weight": 7
+            },
+            {
+              "value": "C40",
+              "weight": 5
+            },
+            {
+              "value": "Polestar 2",
+              "weight": 3
+            },
+            {
+              "value": "V40",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "value": "Land Rover",
+          "options": [
+            {
+              "value": "Range Rover",
+              "weight": 20
+            },
+            {
+              "value": "Discovery",
+              "weight": 18
+            },
+            {
+              "value": "Range Rover Sport",
+              "weight": 15
+            },
+            {
+              "value": "Defender",
+              "weight": 12
+            },
+            {
+              "value": "Range Rover Velar",
+              "weight": 10
+            },
+            {
+              "value": "Evoque",
+              "weight": 8
+            },
+            {
+              "value": "Discovery Sport",
+              "weight": 7
+            },
+            {
+              "value": "Range Rover Evoque",
+              "weight": 5
+            },
+            {
+              "value": "Freelander",
+              "weight": 3
+            },
+            {
+              "value": "Range Rover Classic",
+              "weight": 2
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "year": {
+    "enabled": true,
+    "resolver": "random_integer",
+    "configuration": {
+      "min_value": 1997,
+      "max_value": 2024
+    }
+  },
+  "fuel_Type": {
+    "enabled": true,
+    "resolver": "weighted_random",
+    "configuration": {
+      "weighted_attributes": [
+        {
+          "weight": 71.5,
+          "value": "Gasoline"
+        },
+        {
+          "weight": 17.3,
+          "value": "Diesel"
+        },
+        {
+          "weight": 9.6,
+          "value": "Hybrid"
+        },
+        {
+          "weight": 1.3,
+          "value": "Electric"
+        }
+      ],
+      "other_attributes": []
+    }
+  },
+  "transmission_type": {
+    "enabled": true,
+    "resolver": "weighted_random",
+    "configuration": {
+      "weighted_attributes": [
+        {
+          "weight": 37,
+          "value": "Manual"
+        },
+        {
+          "weight": 63,
+          "value": "Automatic"
+        }
+      ],
+      "other_attributes": []
+    }
+  },
+  "odometer_reading": {
+    "enabled": true,
+    "resolver": "random_integer",
+    "configuration": {
+      "min_value": 5000,
+      "max_value": 90000
+    }
+  },
+  "registration_date": {
+    "enabled": true,
+    "resolver": "sum_random_integer",
+    "configuration": {
+      "column_name": "year",
+      "min_value": 0,
+      "max_value": 2
+    }
+  },
+  "insurance_provider": {
+    "enabled": true,
+    "resolver": "weighted_random",
+    "configuration": {
+      "weighted_attributes": [
+        {
+          "weight": 10,
+          "value": "Seguros Bolivar"
+        },
+        {
+          "weight": 10,
+          "value": "AXA Colpatria"
+        },
+        {
+          "weight": 10,
+          "value": "Mapfre"
+        },
+        {
+          "weight": 10,
+          "value": "Liberty"
+        },
+        {
+          "weight": 10,
+          "value": "Equidad seguros"
+        },
+        {
+          "weight": 10,
+          "value": "Sura"
+        },
+        {
+          "weight": 10,
+          "value": "SBS"
+        },
+        {
+          "weight": 10,
+          "value": "Seguros del estado"
+        },
+        {
+          "weight": 10,
+          "value": "Previsora"
+        },
+        {
+          "weight": 10,
+          "value": "Solidaria"
+        }
+      ],
+      "other_attributes": []
+    }
+  },
+  "insurance_expiration_date": {
+    "enabled": true,
+    "resolver": "sum_random_integer",
+    "configuration": {
+      "column_name": "registration_date",
+      "min_value": 0,
+      "max_value": 10
+    }
+  },
+  "owner_address": {
+    "enabled": true,
+    "resolver": "random_string_from_files",
+    "configuration": {
+      "separator": " ",
+      "files": [
+        "config/address_0.csv",
+        "config/address_1.csv",
+        "config/address_2.csv",
+        "config/address_3.csv",
+        "config/address_4.csv",
+        "config/address_5.csv"
+      ]
+    }
+  },
+  "city": {
+    "enabled": true,
+    "resolver": "weighted_random",
+    "configuration": {
+      "weighted_attributes": [
+        {
+          "weight": 29,
+          "value": "Bogotá"
+        },
+        {
+          "weight": 16,
+          "value": "Medellín"
+        },
+        {
+          "weight": 9,
+          "value": "Cali"
+        },
+        {
+          "weight": 5,
+          "value": "Funza"
+        },
+        {
+          "weight": 5,
+          "value": "Barranquilla"
+        }
+      ],
+      "other_attributes": [
+        "Chia",
+        "Bucaramanga",
+        "Cartagena",
+        "Cúcuta",
+        "Pereira",
+        "Manizales",
+        "Villavicencio",
+        "Ibagué",
+        "Pasto",
+        "Neiva",
+        "Montería"
+      ]
+    }
+  },
+  "vehicle_type": {
+    "enabled": true,
+    "resolver": "weighted_random",
+    "configuration": {
+      "weighted_attributes": [
+        {
+          "weight": 30.6,
+          "value": "Automoviles"
+        },
+        {
+          "weight": 46.2,
+          "value": "Utilitarios"
+        },
+        {
+          "weight": 9.4,
+          "value": "Pickups"
+        },
+        {
+          "weight": 5.8,
+          "value": "Comerciales carga"
+        },
+        {
+          "weight": 2.6,
+          "value": "Taxis"
+        },
+        {
+          "weight": 4.1,
+          "value": "Camionetas"
+        },
+        {
+          "weight": 1.2,
+          "value": "Comerciales pasajeros"
+        }
+      ],
+      "other_attributes": [
+      ]
+    }
+  },
+  "department": {
+    "enabled": true,
+    "resolver": "conditional_weighted_random",
+    "configuration": {
+      "conditional_column": "city",
+      "weighted_attributes": [
+        {
+          "value": "Bogotá",
+          "options": [
+            {
+              "value": "Bogotá",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Medellín",
+          "options": [
+            {
+              "value": "Antioquia",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Cali",
+          "options": [
+            {
+              "value": "Valle del Cauca",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Funza",
+          "options": [
+            {
+              "value": "Cundinamarca",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Barranquilla",
+          "options": [
+            {
+              "value": "Atlántico",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Chia",
+          "options": [
+            {
+              "value": "Cundinamarca",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Bucaramanga",
+          "options": [
+            {
+              "value": "Santander",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Cartagena",
+          "options": [
+            {
+              "value": "Bolívar",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Cúcuta",
+          "options": [
+            {
+              "value": "Norte de Santander",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Pereira",
+          "options": [
+            {
+              "value": "Risaralda",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Manizales",
+          "options": [
+            {
+              "value": "Caldas",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Villavicencio",
+          "options": [
+            {
+              "value": "Meta",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Ibagué",
+          "options": [
+            {
+              "value": "Tolima",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Pasto",
+          "options": [
+            {
+              "value": "Nariño",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Neiva",
+          "options": [
+            {
+              "value": "Huila",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "value": "Montería",
+          "options": [
+            {
+              "value": "Córdoba",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "engine_size": {
+    "enabled": true,
+    "resolver": "weighted_random",
+    "configuration": {
+      "weighted_attributes": [
+        {
+          "value": "1.0L",
+          "weight": 5
+        },
+        {
+          "value": "1.2L",
+          "weight": 5
+        },
+        {
+          "value": "1.4L",
+          "weight": 8
+        },
+        {
+          "value": "1.6L",
+          "weight": 10
+        },
+        {
+          "value": "1.8L",
+          "weight": 10
+        },
+        {
+          "value": "2.0L",
+          "weight": 10
+        },
+        {
+          "value": "2.2L",
+          "weight": 8
+        },
+        {
+          "value": "2.5L",
+          "weight": 7
+        },
+        {
+          "value": "2.8L",
+          "weight": 6
+        },
+        {
+          "value": "3.0L",
+          "weight": 5
+        },
+        {
+          "value": "3.2L",
+          "weight": 4
+        },
+        {
+          "value": "3.5L",
+          "weight": 4
+        },
+        {
+          "value": "4.0L",
+          "weight": 3
+        },
+        {
+          "value": "4.2L",
+          "weight": 3
+        },
+        {
+          "value": "4.5L",
+          "weight": 2
+        },
+        {
+          "value": "5.0L",
+          "weight": 2
+        },
+        {
+          "value": "5.5L",
+          "weight": 1
+        },
+        {
+          "value": "6.0L",
+          "weight": 1
+        },
+        {
+          "value": "6.5L",
+          "weight": 0.5
+        },
+        {
+          "value": "7.0L",
+          "weight": 0.5
+        }
+      ],
+      "other_attributes": []
+    }
+  },
+  "vehicle_class": {
+    "enabled": false,
+    "resolver": "",
+    "configuration": {
+      "weighted_attributes": [],
+      "other_attributes": []
+    }
+  },
+  "wheel_drive": {
+    "enabled": false,
+    "resolver": "",
+    "configuration": {
+      "weighted_attributes": [],
+      "other_attributes": []
+    }
+  },
+  "registration_status": {
+    "enabled": false,
+    "resolver": "",
+    "configuration": {
+      "weighted_attributes": [],
+      "other_attributes": []
+    }
+  },
+  "tax_payment_status": {
+    "enabled": false,
+    "resolver": "",
+    "configuration": {
+      "weighted_attributes": [],
+      "other_attributes": []
+    }
+  },
+  "last_maintenance_date": {
+    "enabled": false,
+    "resolver": "",
+    "configuration": {
+      "weighted_attributes": [],
+      "other_attributes": []
+    }
+  },
+  "number_of_seats": {
+    "enabled": false,
+    "resolver": "",
+    "configuration": {
+      "weighted_attributes": [],
+      "other_attributes": []
+    }
+  },
+  "number_of_doors": {
+    "enabled": false,
+    "resolver": "",
+    "configuration": {
+      "weighted_attributes": [],
+      "other_attributes": []
+    }
+  },
+  "gps_installed": {
+    "enabled": false,
+    "resolver": "",
+    "configuration": {
+      "weighted_attributes": [],
+      "other_attributes": []
+    }
+  },
+  "emission_standard": {
+    "enabled": false,
+    "resolver": "",
+    "configuration": {
+      "weighted_attributes": [],
+      "other_attributes": []
+    }
+  },
+  "safety_rating": {
+    "enabled": false,
+    "resolver": "",
+    "configuration": {
+      "weighted_attributes": [],
+      "other_attributes": []
+    }
+  },
+  "insurance_coverage_type": {
+    "enabled": false,
+    "resolver": "",
+    "configuration": {
+      "weighted_attributes": [],
+      "other_attributes": []
+    }
+  }
+}
