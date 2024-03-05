@@ -22,18 +22,18 @@ Project to generate random data about cars in colombia.
 16. City: The city where the vehicle is registered. 
 17. Department: The department (administrative region) where the vehicle is registered. 
 18. VehicleType: The type of vehicle (e.g., sedan, SUV, truck). 
-19. EngineSize: The size of the vehicle engine. 
-20. VehicleClass: The class of the vehicle (e.g., compact, mid-size, luxury). 
-21. WheelDrive: The type of wheel drive (e.g., 2WD, 4WD). 
-22. RegistrationStatus: The status of vehicle registration (e.g., active, expired). 
-23. TaxPaymentStatus: The status of vehicle tax payment. 
-24. LastMaintenanceDate: The date of the vehicle's last maintenance. 
-25. NumberOfSeats: The number of seats in the vehicle. 
-26. NumberOfDoors: The number of doors in the vehicle. 
-27. GPSInstalled: Indicates whether the vehicle has a GPS system installed. 
-28. EmissionStandard: The emission standard the vehicle complies with. 
-29. SafetyRating: Safety rating of the vehicle. 
-30. InsuranceCoverageType: Type of coverage in the vehicle insurance.
+19. EngineSize: The size of the vehicle engine.  
+20. WheelDrive: The type of wheel drive (e.g., 2WD, 4WD).
+21. LastMaintenanceDate: The date of the vehicle's last maintenance. 
+22. NumberOfSeats: The number of seats in the vehicle. 
+23. NumberOfDoors: The number of doors in the vehicle. 
+24. GPSInstalled: Indicates whether the vehicle has a GPS system installed. 
+25. EmissionStandard: The emission standard the vehicle complies with. 
+26. SafetyRating: Safety rating of the vehicle. 
+27. InsuranceCoverageType: Type of coverage in the vehicle insurance. 
+28. EstimatedMarketValue: Estimated market value
+29. VehicleStatus: IN_USE,SELLING,MAINTENANCE
+30. AccidentHistory: 
 
 Taken from ChatGPT
 

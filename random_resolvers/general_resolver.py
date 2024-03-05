@@ -1,4 +1,5 @@
 import random
+from datetime import datetime, timedelta
 
 from utils.file_manager import open_csv_file
 from utils.random_util import get_random_in_list, get_wighted_attribute, get_random_x
@@ -22,7 +23,7 @@ def sum_random_integer(row_data, resolver_configuration):
     max_value = resolver_configuration["max_value"]
     random_value = get_random_x(min_value, max_value)
 
-    return resolver_configuration["column_name"] + str(random_value)
+    return row_data[resolver_configuration["column_name"]] + random_value
 
 
 def random_integer(row_data, resolver_configuration):
@@ -32,6 +33,14 @@ def random_integer(row_data, resolver_configuration):
 
     return random_value
 
+
+def distinct_sequence_integer(row_data, resolver_configuration):
+    distinct_id = resolver_configuration["distinct_id"]
+    if distinct_id not in distinct_random_map:
+        distinct_random_map[distinct_id] = -1
+    distinct_random_map[distinct_id] += 1
+
+    return distinct_random_map[distinct_id]
 
 def distinct_random_integer(row_data, resolver_configuration):
     distinct_id = resolver_configuration["distinct_id"]
@@ -93,3 +102,12 @@ def random_string_from_files(row_data, resolver_configuration):
         ans += separator + get_random_in_list(file_content)[0]
 
     return ans
+
+
+def subtract_random_date(row_data, resolver_configuration):
+    current_date = datetime.now()
+    min_value = resolver_configuration["min_value"]
+    max_value = resolver_configuration["max_value"]
+    result_date = current_date - timedelta(days=get_random_x(min_value, max_value))
+
+    return result_date.strftime("%Y-%m-%d")  #To add hours use this %H:%M:%S

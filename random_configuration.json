@@ -1,54 +1,24 @@
 {
-  "owner_name": {
+  "id": {
     "enabled": true,
-    "resolver": "random_name",
+    "resolver": "distinct_sequence_integer",
     "configuration": {
-      "primary_name": "config/names.csv",
-      "second_name": "config/names.csv",
-      "first_last_name": "config/last_names.csv",
-      "second_last_name": "config/last_names.csv"
+      "distinct_id": "id"
     }
   },
-  "color": {
+  "plate_number": {
     "enabled": true,
-    "resolver": "weighted_random",
+    "resolver": "random_string_from_files",
     "configuration": {
-      "weighted_attributes": [
-        {
-          "value": "Blanco",
-          "weight": 40
-        },
-        {
-          "value": "Plateado",
-          "weight": 17
-        },
-        {
-          "value": "Gris",
-          "weight": 18
-        },
-        {
-          "value": "Negro",
-          "weight": 14
-        },
-        {
-          "value": "Rojo",
-          "weight": 6
-        }
-      ],
-      "other_attributes": [
-        "Azul",
-        "Verde",
-        "Amarillo"
+      "separator": "",
+      "files": [
+        "config/abc.csv",
+        "config/abc.csv",
+        "config/abc.csv",
+        "config/number.csv",
+        "config/number.csv",
+        "config/number.csv"
       ]
-    }
-  },
-  "owner_id": {
-    "enabled": true,
-    "resolver": "distinct_random_integer",
-    "configuration": {
-      "min_value": 20677476,
-      "max_value": 1099999999,
-      "distinct_id": "owner_id"
     }
   },
   "brand": {
@@ -812,6 +782,39 @@
       "max_value": 2024
     }
   },
+  "color": {
+    "enabled": true,
+    "resolver": "weighted_random",
+    "configuration": {
+      "weighted_attributes": [
+        {
+          "value": "Blanco",
+          "weight": 40
+        },
+        {
+          "value": "Plateado",
+          "weight": 17
+        },
+        {
+          "value": "Gris",
+          "weight": 18
+        },
+        {
+          "value": "Negro",
+          "weight": 14
+        },
+        {
+          "value": "Rojo",
+          "weight": 6
+        }
+      ],
+      "other_attributes": [
+        "Azul",
+        "Verde",
+        "Amarillo"
+      ]
+    }
+  },
   "fuel_Type": {
     "enabled": true,
     "resolver": "weighted_random",
@@ -929,6 +932,25 @@
       "max_value": 10
     }
   },
+  "owner_name": {
+    "enabled": true,
+    "resolver": "random_name",
+    "configuration": {
+      "primary_name": "config/names.csv",
+      "second_name": "config/names.csv",
+      "first_last_name": "config/last_names.csv",
+      "second_last_name": "config/last_names.csv"
+    }
+  },
+  "owner_id": {
+    "enabled": true,
+    "resolver": "distinct_random_integer",
+    "configuration": {
+      "min_value": 20677476,
+      "max_value": 1099999999,
+      "distinct_id": "owner_id"
+    }
+  },
   "owner_address": {
     "enabled": true,
     "resolver": "random_string_from_files",
@@ -982,44 +1004,6 @@
         "Pasto",
         "Neiva",
         "Montería"
-      ]
-    }
-  },
-  "vehicle_type": {
-    "enabled": true,
-    "resolver": "weighted_random",
-    "configuration": {
-      "weighted_attributes": [
-        {
-          "weight": 30.6,
-          "value": "Automoviles"
-        },
-        {
-          "weight": 46.2,
-          "value": "Utilitarios"
-        },
-        {
-          "weight": 9.4,
-          "value": "Pickups"
-        },
-        {
-          "weight": 5.8,
-          "value": "Comerciales carga"
-        },
-        {
-          "weight": 2.6,
-          "value": "Taxis"
-        },
-        {
-          "weight": 4.1,
-          "value": "Camionetas"
-        },
-        {
-          "weight": 1.2,
-          "value": "Comerciales pasajeros"
-        }
-      ],
-      "other_attributes": [
       ]
     }
   },
@@ -1176,6 +1160,44 @@
       ]
     }
   },
+  "vehicle_type": {
+    "enabled": true,
+    "resolver": "weighted_random",
+    "configuration": {
+      "weighted_attributes": [
+        {
+          "weight": 30.6,
+          "value": "Automoviles"
+        },
+        {
+          "weight": 46.2,
+          "value": "Utilitarios"
+        },
+        {
+          "weight": 9.4,
+          "value": "Pickups"
+        },
+        {
+          "weight": 5.8,
+          "value": "Comerciales carga"
+        },
+        {
+          "weight": 2.6,
+          "value": "Taxis"
+        },
+        {
+          "weight": 4.1,
+          "value": "Camionetas"
+        },
+        {
+          "weight": 1.2,
+          "value": "Comerciales pasajeros"
+        }
+      ],
+      "other_attributes": [
+      ]
+    }
+  },
   "engine_size": {
     "enabled": true,
     "resolver": "weighted_random",
@@ -1265,91 +1287,206 @@
       "other_attributes": []
     }
   },
-  "vehicle_class": {
-    "enabled": false,
-    "resolver": "",
-    "configuration": {
-      "weighted_attributes": [],
-      "other_attributes": []
-    }
-  },
   "wheel_drive": {
-    "enabled": false,
-    "resolver": "",
+    "enabled": true,
+    "resolver": "weighted_random",
     "configuration": {
-      "weighted_attributes": [],
-      "other_attributes": []
-    }
-  },
-  "registration_status": {
-    "enabled": false,
-    "resolver": "",
-    "configuration": {
-      "weighted_attributes": [],
-      "other_attributes": []
-    }
-  },
-  "tax_payment_status": {
-    "enabled": false,
-    "resolver": "",
-    "configuration": {
-      "weighted_attributes": [],
+      "weighted_attributes": [
+        {
+          "value": "2WD",
+          "weight": 30
+        },
+        {
+          "value": "4WD",
+          "weight": 25
+        },
+        {
+          "value": "Front-Wheel Drive",
+          "weight": 10
+        },
+        {
+          "value": "Rear-Wheel Drive",
+          "weight": 10
+        },
+        {
+          "value": "All-Wheel Drive",
+          "weight": 15
+        },
+        {
+          "value": "Electronic 4WD",
+          "weight": 5
+        },
+        {
+          "value": "Manual 4WD",
+          "weight": 2
+        },
+        {
+          "value": "AWD with Torque Vectoring",
+          "weight": 3
+        },
+        {
+          "value": "4x4",
+          "weight": 9
+        },
+        {
+          "value": "AWD with Locking Differential",
+          "weight": 1
+        }
+      ],
       "other_attributes": []
     }
   },
   "last_maintenance_date": {
-    "enabled": false,
-    "resolver": "",
+    "enabled": true,
+    "resolver": "subtract_random_date",
     "configuration": {
-      "weighted_attributes": [],
-      "other_attributes": []
+      "date": "now",
+      "min_value": 0,
+      "max_value": 930
     }
   },
   "number_of_seats": {
-    "enabled": false,
-    "resolver": "",
+    "enabled": true,
+    "resolver": "weighted_random",
     "configuration": {
-      "weighted_attributes": [],
+      "weighted_attributes": [
+        {
+          "value": "5",
+          "weight": 92
+        },
+        {
+          "value": "7",
+          "weight": 5
+        },
+        {
+          "value": "8",
+          "weight": 3
+        }
+      ],
       "other_attributes": []
     }
   },
   "number_of_doors": {
-    "enabled": false,
-    "resolver": "",
+    "enabled": true,
+    "resolver": "weighted_random",
     "configuration": {
-      "weighted_attributes": [],
+      "weighted_attributes": [
+        {
+          "value": "5",
+          "weight": 90
+        },
+        {
+          "value": "3",
+          "weight": 10
+        }
+      ],
       "other_attributes": []
     }
   },
   "gps_installed": {
-    "enabled": false,
-    "resolver": "",
+    "enabled": true,
+    "resolver": "weighted_random",
     "configuration": {
-      "weighted_attributes": [],
+      "weighted_attributes": [
+        {
+          "value": "True",
+          "weight": 90
+        },
+        {
+          "value": "False",
+          "weight": 10
+        }
+      ],
       "other_attributes": []
     }
   },
   "emission_standard": {
-    "enabled": false,
-    "resolver": "",
+    "enabled": true,
+    "resolver": "weighted_random",
     "configuration": {
-      "weighted_attributes": [],
-      "other_attributes": []
+      "weighted_attributes": [
+      ],
+      "other_attributes": [
+        "Euro 1",
+        "Euro 2",
+        "Euro 3",
+        "Euro 4",
+        "Euro 5",
+        "Euro 6"
+      ]
     }
   },
   "safety_rating": {
-    "enabled": false,
-    "resolver": "",
+    "enabled": true,
+    "resolver": "weighted_random",
     "configuration": {
-      "weighted_attributes": [],
-      "other_attributes": []
+      "weighted_attributes": [
+      ],
+      "other_attributes": [
+        "1 stars",
+        "2 stars",
+        "3 stars",
+        "4 stars",
+        "5 stars"
+      ]
     }
   },
   "insurance_coverage_type": {
-    "enabled": false,
-    "resolver": "",
+    "enabled": true,
+    "resolver": "weighted_random",
     "configuration": {
-      "weighted_attributes": [],
+      "weighted_attributes": [
+      ],
+      "other_attributes": [
+        "Cobertura total",
+        "Cobertura da;os propios",
+        "Cobertura hurto"
+      ]
+    }
+  },
+  "estimated_market_value": {
+    "enabled": true,
+    "resolver": "random_integer",
+    "configuration": {
+      "min_value": 10000000,
+      "max_value": 300000000
+    }
+  },
+  "vehicle_status": {
+    "enabled": true,
+    "resolver": "weighted_random",
+    "configuration": {
+      "weighted_attributes": [
+        {
+          "weight": 90,
+          "value": "IN_USE"
+        },
+        {
+          "weight": 5,
+          "value": "SELLING"
+        },
+        {
+          "weight": 5,
+          "value": "MAINTENANCE"
+        }
+      ],
+      "other_attributes": []
+    }
+  },
+  "accident_history": {
+    "enabled": true,
+    "resolver": "weighted_random",
+    "configuration": {
+      "weighted_attributes": [
+        {
+          "weight": 30,
+          "value": "True"
+        },
+        {
+          "weight": 70,
+          "value": "False"
+        }
+      ],
       "other_attributes": []
     }
   }

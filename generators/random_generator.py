@@ -1,5 +1,6 @@
 from random_resolvers.general_resolver import name_resolver, weighted_random, distinct_random_integer, \
-    conditional_weighted_random, random_integer, sum_random_integer, random_string_from_files
+    conditional_weighted_random, random_integer, sum_random_integer, random_string_from_files, subtract_random_date, \
+    distinct_sequence_integer
 from utils.file_manager import open_json_file
 
 
@@ -56,10 +57,12 @@ class RandomGenerator(object):
             "random_name": name_resolver,
             "weighted_random": weighted_random,
             "distinct_random_integer": distinct_random_integer,
+            "distinct_sequence_integer": distinct_sequence_integer,
             "conditional_weighted_random": conditional_weighted_random,
             "random_integer": random_integer,
             "sum_random_integer": sum_random_integer,
             "random_string_from_files": random_string_from_files,
+            "subtract_random_date": subtract_random_date,
         }
 
         if resolver_name not in resolvers_map:
