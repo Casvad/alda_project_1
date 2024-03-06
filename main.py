@@ -7,5 +7,5 @@ def run_random_generator():
     generator.print_data(format="csv", file_name="out.csv")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run_random_generator()

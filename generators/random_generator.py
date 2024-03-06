@@ -1,11 +1,18 @@
-from random_resolvers.general_resolver import name_resolver, weighted_random, distinct_random_integer, \
-    conditional_weighted_random, random_integer, sum_random_integer, random_string_from_files, subtract_random_date, \
-    distinct_sequence_integer
+from random_resolvers.general_resolver import (
+    name_resolver,
+    weighted_random,
+    distinct_random_integer,
+    conditional_weighted_random,
+    random_integer,
+    sum_random_integer,
+    random_string_from_files,
+    subtract_random_date,
+    distinct_sequence_integer,
+)
 from utils.file_manager import open_json_file
 
 
 class RandomGenerator(object):
-
     def __init__(self, config_file_name):
         self.random_data = []
         self.config_file_name = config_file_name
@@ -17,9 +24,10 @@ class RandomGenerator(object):
             row_data = {}
             for column_name in self.config:
                 column_data = self.config[column_name]
-                if column_data['enabled']:
-                    row_value = self.__resolve_by_name(column_name, column_data["resolver"],
-                                                       column_data["configuration"], row_data)
+                if column_data["enabled"]:
+                    row_value = self.__resolve_by_name(
+                        column_name, column_data["resolver"], column_data["configuration"], row_data
+                    )
                     row_data[column_name] = row_value
 
             random_data.append(row_data)
@@ -52,7 +60,6 @@ class RandomGenerator(object):
             print(ans)
 
     def __resolve_by_name(self, column_name, resolver_name, configuration, row_data):
-
         resolvers_map = {
             "random_name": name_resolver,
             "weighted_random": weighted_random,

@@ -42,6 +42,7 @@ def distinct_sequence_integer(row_data, resolver_configuration):
 
     return distinct_random_map[distinct_id]
 
+
 def distinct_random_integer(row_data, resolver_configuration):
     distinct_id = resolver_configuration["distinct_id"]
     min_value = resolver_configuration["min_value"]
@@ -66,10 +67,12 @@ def weighted_random(row_data, resolver_configuration):
         resolver_configuration["add_other_attributes"] = False
         random.shuffle(other_attributes)
         for other_attribute in other_attributes:
-            weighted_attributes.append({
-                "value": other_attribute,
-                "weight": 1,
-            })
+            weighted_attributes.append(
+                {
+                    "value": other_attribute,
+                    "weight": 1,
+                }
+            )
 
     return get_wighted_attribute(weighted_attributes)
 
@@ -110,4 +113,4 @@ def subtract_random_date(row_data, resolver_configuration):
     max_value = resolver_configuration["max_value"]
     result_date = current_date - timedelta(days=get_random_x(min_value, max_value))
 
-    return result_date.strftime("%Y-%m-%d")  #To add hours use this %H:%M:%S
+    return result_date.strftime("%Y-%m-%d")  # To add hours use this %H:%M:%S

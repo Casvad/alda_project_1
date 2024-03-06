@@ -60,12 +60,35 @@ source env/bin/activate
 pip3 install -r requirements.txt
 ```
 
+# Test
+
+```shell
+python -m unittest
+```
+
+
 # Check coverage
 
 Make sure you have "coverage" in your requirements.txt file and run pip install. 
 Then run `coverage run -m unittest discover` and after that run `coverage report` to get the following table:
 
 ```shell
+Name                                   Stmts   Miss  Cover
+----------------------------------------------------------
+base/__init__.py                           0      0   100%
+base/test/__init__.py                      0      0   100%
+generators/__init__.py                     0      0   100%
+generators/random_generator.py            43      3    93%
+generators/test/__init__.py                0      0   100%
+generators/test/test_algorithm.py         29      1    97%
+random_resolvers/__init__.py               0      0   100%
+random_resolvers/general_resolver.py      77      2    97%
+utils/__init__.py                          0      0   100%
+utils/constants.py                         2      0   100%
+utils/file_manager.py                     12      2    83%
+utils/random_util.py                      18      0   100%
+----------------------------------------------------------
+TOTAL                                    181      8    96%
 
 ```
 
